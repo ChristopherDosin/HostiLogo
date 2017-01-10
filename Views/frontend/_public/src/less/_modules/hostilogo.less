@@ -1,0 +1,56 @@
+@media screen and (min-width: @tabletViewportWidth) { // View für Tablets und Desktops
+  .header-main {
+
+    .logo-main {
+
+      .unitize(margin-top, @marginTop);
+      .unitize(margin-bottom, @marginBottom);
+
+      .logo--link {
+        .unitize-height(@height);  // 50 auf eure Höhe anpassen
+      }
+      .logo--shop {
+        .unitize-height(@height); // 50 auf eure Höhe anpassen
+      }
+    }
+
+    .shop--navigation {
+      .unitize(margin-top, @navigationTop);
+    }
+
+  }
+
+  .is--minimal-header  {
+    .header-main {
+      .logo-main  {
+        .unitize-margin(@minimalMarginTop, 0, @minimalMarginBottom, 0);
+
+        .logo--link {
+          .unitize-height(@minimalLogoHeight);
+        }
+        .logo--shop {
+          .unitize-height(@minimalLogoHeight);
+        }
+
+      }
+      .shop--navigation {
+        .unitize(margin-top, @minimalNavigationTop);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @phoneLandscapeViewportWidth) {
+  .header-main .logo-main .logo--shop {
+    &.block when (@center = 1) {
+      float:none;
+      margin:0 auto;
+    }
+    .logo--link when (@center = 1) {
+      display: block;
+      img {
+        margin:0 auto;
+      }
+    }
+  }
+}
