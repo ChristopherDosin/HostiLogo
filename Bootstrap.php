@@ -9,7 +9,7 @@ class Shopware_Plugins_Frontend_HostiLogo_Bootstrap extends Shopware_Components_
 
     public function getVersion()
     {
-        return '1.9';
+        return '1.9.1';
     }
 
     public function getInfo()
